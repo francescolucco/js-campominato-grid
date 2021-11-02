@@ -53,6 +53,34 @@ main h3{
 main h3.hide{
   display: none;
 }
+#box-square{
+  height: 500px;
+  width: 500px;
+  background-color: rgb(233, 121, 121);
+}
+.square{
+  float: left;
+  border: 1px solid black;
+  display: block;
+}
+.square.clicked{
+  background-color: cornflowerblue;
+}
+.square.hide{
+  display: none;
+}
+.square.crazy{
+  height: calc(100% / 10);
+  width: calc(100% / 10);
+}
+.square.easy{
+  height: calc(100% / 9);
+  width: calc(100% / 9);
+}
+.square.hard{
+  height: calc(100% / 7);
+  width: calc(100% / 7);
+}
 
 /*********** FOOTER ************/
 footer{

@@ -34,11 +34,11 @@ Le validazioni e i controlli possiamo farli anche in un secondo momento. -->
           <div class="box d-flex align-items-center justify-content-end">
             <p>Difficoltà:</p>
             <select class="form-select" aria-label="Default select example">
-              <option selected value="1">Crazy</option>
-              <option value="2">Easy</option>
-              <option value="3">Hard</option>
+              <option selected value="1" id="crazy">Crazy</option>
+              <option value="2" id="easy">Easy</option>
+              <option value="3" id="hard">Hard</option>
             </select>
-            <button type="button" class="btn btn-light">Play</button>
+            <button type="button" id="fl_btn-header" class="btn btn-light">Play</button>
           </div>
         </div>
       </div>
@@ -47,6 +47,9 @@ Le validazioni e i controlli possiamo farli anche in un secondo momento. -->
 
   <main class="d-flex justify-content-center align-items-center">
     <h3 class="hide">Seleziona il livello di difficoltà e genera la griglia</h3>
+    <div id="box-square">
+      <div class="square crazy clicked"></div>
+    </div>
   </main>
 
   <footer>
