@@ -1,6 +1,6 @@
 // ** INIZIALIZZAZIONE CONSTANTI E VARIABILI **//
 const btn = document.getElementById('fl_btn-header');
-const boxSquare = document.querySelector('.box-square');
+// const boxSquare = document.querySelector('.box-square');
 const msgStart = document.getElementById('msg-start');
 const container = document.getElementById('container');
 const listaRandom = [];
@@ -10,9 +10,12 @@ let gameLevel = '';
 
 // // 1. Quando preme su Play faccio leggere il valore della select e faccio registrare il numero di quadrati da stampare
 document.getElementById('fl_btn-header').addEventListener('click', function(){
-  msgStart.className = 'hide';
+  // msgStart.className = 'hide';
+  // boxSquare.className = 'box-square';
+  container.innerHTML = '';
+  const boxSquare = document.createElement('div');
   boxSquare.className = 'box-square';
-  // boxSquare.remove();
+  container.append(boxSquare);
   let valoreLetto = document.getElementById('select-livello').value;
   console.log(valoreLetto);
 
@@ -38,76 +41,15 @@ document.getElementById('fl_btn-header').addEventListener('click', function(){
       }
   }
   console.log(squareNumber);
-
-
-
-
-
   });
   // -----------------------------------------------------
-
-
-
-// document.getElementById('fl_btn-header').addEventListener('click', function(){
-//   msgStart.className = 'hide';
-//   boxSquare.classList.remove('hide');
-//   let valoreLetto = document.getElementById('select-livello').value;
-//   console.log(valoreLetto);
-//   if(valoreLetto == '1'){
-//     const sq = document.getElementsByClassName('square');
-//     if(sq !== 0){
-//       for( let i = 0; i < sq.length; i++){
-//         sq[i].remove();
-//       }
-//     }
-//     squareGenerator (100);
-//     for( let i = 0; i < 100; i++){
-//       sq[i].className = 'square crazy';
-//     }
-//   }else if(valoreLetto == '2'){
-//     boxSquare.classList.remove('hide');
-//     if(msgStart.className !== 'hide'){
-//       const sq = document.getElementsByClassName('square');
-//       for( let i = 0; i < sq.length; i++){
-//         sq[i].className = 'square hide';
-//       }
-//       for( let i = 0; i < 81; i++){
-//         sq[i].className = 'square easy';
-//       }
-//     }else{
-//     msgStart.className = 'hide';
-//     squareGenerator (81);
-//     const sq = document.getElementsByClassName('square');
-//     for( let i = 0; i < 100; i++){
-//       sq[i].className = 'square easy';
-//     }
-//     }
-//   }else if(valoreLetto == '3'){
-//     msgStart.className = 'hide';
-//     boxSquare.classList.remove('hide');
-//     const sq = document.getElementsByClassName('square');
-//     if(sq !== 0){
-//       for( let i = 0; i < sq.length; i++){
-//         sq[i].remove();
-//       }
-//     }
-//     squareGenerator (49);
-//     for( let i = 0; i < 49; i++){
-//       sq[i].className = 'square hard';
-//     }
-//   }
-// });
-
-
-
-
 
 // **********FUNZIONI****************
 
 
 // funzione per generare numero random
 function numRandom (num1, num2){
-  return Math.floor(Math.random() * (num2) - num1);
+  return Math.floor(Math.random() * (num2) + num1);
 }
 
 // funzione per sapere se un numero è pari o dispari
