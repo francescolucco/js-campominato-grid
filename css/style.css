@@ -88,6 +88,10 @@ main h3.hide{
   height: calc(100% / 7);
   width: calc(100% / 7);
 }
+span{
+  font-weight: bolder;
+  font-size: 25px;
+}
 
 /*********** FOOTER ************/
 footer{
