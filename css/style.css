@@ -72,6 +72,11 @@ main h3.hide{
 }
 .square.clicked{
   background-color: cornflowerblue;
+  color: white;
+}
+.square.bomb{
+  background-color: brown;
+  color: white;
 }
 .square.hide{
   display: none;
