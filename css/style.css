@@ -53,15 +53,22 @@ main h3{
 main h3.hide{
   display: none;
 }
-#box-square{
+.box-square{
   height: 500px;
   width: 500px;
-  background-color: rgb(233, 121, 121);
+  /* background-color: rgb(233, 121, 121); */
+  display: block;
+}
+.box-square.hide{
+  display: none;
 }
 .square{
   float: left;
   border: 1px solid black;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 .square.clicked{
   background-color: cornflowerblue;
@@ -94,3 +101,4 @@ footer p{
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
